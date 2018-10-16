@@ -1,0 +1,30 @@
+﻿@model FarmDBMongoV1.Models.TransactionsWithAccounts
+
+<h2>TransactionListDetails</h2>
+<div>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>@Html.DisplayNameFor(model => model.TransactionID)</dt>
+		<dd>@Html.DisplayFor(model => model.TransactionID)</dd>
+		<dt>@Html.DisplayNameFor(model => model.TransactionDescription)</dt>
+		<dd>@Html.DisplayFor(model => model.TransactionDescription)</dd>
+		<dt>@Html.DisplayNameFor(model => model.TransactionDate)</dt>
+		<dd>@Html.DisplayFor(model => model.TransactionDate)</dd>
+		<dt>@Html.DisplayNameFor(model => model.AccountNumber1)</dt>
+		<dd>@Html.DisplayFor(model => model.AccountNumber1)</dd>
+		<dt>@Html.DisplayNameFor(model => model.Account_docs.FirstOrDefault().AccountName)</dt>
+		<dd>@Html.DisplayFor(model => model.Account_docs.FirstOrDefault().AccountName)</dd>
+		<dt>@Html.DisplayNameFor(model => model.Account1Amount)</dt>
+		<dd>@Html.DisplayFor(model => model.Account1Amount)</dd>
+		<dt>@Html.DisplayNameFor(model => model.Account_docs.FirstOrDefault().AccountSubType.AccountSubType1)</dt>
+		<dd>@Html.DisplayFor(model => model.Account_docs.FirstOrDefault().AccountSubType.AccountSubType1)</dd>
+		<dt>@Html.DisplayNameFor(model => model.Account_docs.FirstOrDefault().AccountSubType.AccountType.AccountType1)</dt>
+		<dd>@Html.DisplayFor(model => model.Account_docs.FirstOrDefault().AccountSubType.AccountType.AccountType1)</dd>
+		<dt>@Html.DisplayNameFor(model => model.Account_docs.FirstOrDefault().AccountPerson.AccountPerson1)</dt>
+		<dd>@Html.DisplayFor(model => model.Account_docs.FirstOrDefault().AccountPerson.AccountPerson1)</dd>
+	</dl>
+</div>
+<p>
+	@Html.ActionLink("Edit", "TransactionEdit", new { id = Model.Id }) |
+	@Html.ActionLink("Back to List", "TransactionList", "Home")
+</p>

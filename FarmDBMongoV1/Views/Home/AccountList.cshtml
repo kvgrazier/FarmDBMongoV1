@@ -1,0 +1,41 @@
+﻿@model List<FarmDBMongoV1.Models.Account>
+
+@{
+    ViewBag.Title = "Accounts";
+}
+
+<h2>Accounts</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AccountCreate")
+</p>
+<table class="table">
+	<tr>
+		<th>Account Number</th>
+		<th>Account Name</th>
+		<th>TaxFormRef</th>
+		<th>Active</th>
+		<th>Account Person</th>
+		<th>AccountSubType</th>
+		<th>SortOrder</th>
+		<th>AccountType</th>
+	</tr>
+
+@foreach (var item in Model) {
+	<tr>
+		<td>@Html.DisplayFor(modelItem => item.AccountNumber)</td>
+		<td>@Html.DisplayFor(modelItem => item.AccountName)</td>
+		<td>@Html.DisplayFor(modelItem => item.TaxFormRef)</td>
+		<td>@Html.DisplayFor(modelItem => item.Active)</td>
+		<td>@Html.DisplayFor(modelItem => item.AccountPerson.AccountPerson1)</td>
+		<td>@Html.DisplayFor(modelItem => item.AccountSubType.AccountSubType1)</td>
+		<td>@Html.DisplayFor(modelItem => item.AccountSubType.SortOrder)</td>
+		<td>@Html.DisplayFor(modelItem => item.AccountSubType.AccountType.AccountType1)</td>
+		<td>
+			@Html.ActionLink("Edit", "AccountEdit", new {id=item.Id}) |
+			@Html.ActionLink("Details", "AccountDetails", new {id=item.Id}) |
+			@Html.ActionLink("Delete", "AccountDelete", new {id=item.Id})
+		</td>
+	</tr>
+}
+</table>

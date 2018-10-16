@@ -1,0 +1,37 @@
+﻿@model FarmDBMongoV1.Models.Account
+
+<h2>Account Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+	<h4>Transaction</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>Account Number</dt>
+		<dd>@Html.DisplayFor(model => model.AccountNumber)</dd>
+		<dt>Account Name</dt>
+		<dd>@Html.DisplayFor(model => model.AccountName)</dd>
+		<dt>TaxFormRef</dt>
+		<dd>@Html.DisplayFor(model => model.TaxFormRef)</dd>
+		<dt>Active</dt>
+		<dd>@Html.CheckBoxFor(model => model.Active)</dd>
+		<dt>AccountPerson</dt>
+		<dd>@Html.DisplayFor(model => model.AccountPerson.AccountPerson1)</dd>
+		<dt>AccountSubType</dt>
+		<dd>@Html.DisplayFor(model => model.AccountSubType.AccountSubType1)</dd>
+		<dt>SortOrder</dt>
+		<dd>@Html.DisplayFor(model => model.AccountSubType.SortOrder)</dd>
+		<dt>AccountType</dt>
+		<dd>@Html.DisplayFor(model => model.AccountSubType.AccountType.AccountType1)</dd>
+	</dl>
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+		@Html.HiddenFor(model => model.Id)
+		<div class="form-actions no-color">
+			<input type="submit" value="Delete" class="btn btn-default" /> |
+			@Html.ActionLink("Back to List", "AccountList", "Home")
+		</div>
+	}
+</div>
+

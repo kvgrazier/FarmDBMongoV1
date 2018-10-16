@@ -1,0 +1,37 @@
+﻿@model List<FarmDBMongoV1.Models.FilteredTransactions>
+
+<table>
+    <tr>
+        <td style="padding-left: 10px; padding-right: 10px;"><h4>Profit And Loss</h4></td>
+        <td style="padding-left: 10px; padding-right: 10px;"><h5>Person:  @Session["PersonID"].ToString()</h5></td>
+        <td style="padding-left: 10px; padding-right: 10px;"><h5>Begin Date:  @Session["firstDay"]</h5></td>
+        <td style="padding-left: 10px; padding-right: 10px;"><h5>End Date:  @Session["lastDay"]</h5></td>
+ </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>AccountNumber </th>
+        <th>AccountName</th>
+        <th>AccountSubType</th>
+        @*<th>SortOrder</th>*@
+        <th>AccountType </th>
+        <th>Total</th>
+        @*<th>Count</th>*@
+        @*<th>AccountPerson </th>*@
+
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.AccountNumber)</td>
+        <td>@Html.DisplayFor(modelItem => item.AccountName)</td>
+        <td>@Html.DisplayFor(modelItem => item.AccountSubType)</td>
+        @*<td>@Html.DisplayFor(modelItem => item.SortOrder)</td>*@
+        <td>@Html.DisplayFor(modelItem => item.AccountType)</td>
+        <td>@Html.DisplayFor(modelItem => item.Total)</td>
+        @*<td>@Html.DisplayFor(modelItem => item.Count)</td>*@
+        @*<td>@Html.DisplayFor(modelItem => item.AccountPerson)</td>*@
+    </tr>
+    }
+</table>
+

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmDBMongoV1", "FarmDBMongoV1\FarmDBMongoV1.csproj", "{D874D8EA-A49F-48D9-BF5D-B0F0776B698C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D874D8EA-A49F-48D9-BF5D-B0F0776B698C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D874D8EA-A49F-48D9-BF5D-B0F0776B698C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D874D8EA-A49F-48D9-BF5D-B0F0776B698C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D874D8EA-A49F-48D9-BF5D-B0F0776B698C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A49A109-79C0-42C7-AEC7-77B2CDB40D49}
+	EndGlobalSection
+EndGlobal

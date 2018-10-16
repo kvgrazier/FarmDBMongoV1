@@ -1,0 +1,28 @@
+﻿@model FarmDBMongoV1.Models.Account
+
+<h2>Account Details</h2>
+<div>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>Account Number</dt>
+		<dd>@Html.DisplayFor(model => model.AccountNumber)</dd>
+		<dt>Account Name</dt>
+		<dd>@Html.DisplayFor(model => model.AccountName)</dd>
+		<dt>TaxFormRef</dt>
+		<dd>@Html.DisplayFor(model => model.TaxFormRef)</dd>
+		<dt>Active</dt>
+		<dd>@Html.CheckBoxFor(model => model.Active)</dd>
+		<dt>AccountPerson</dt>
+		<dd>@Html.DisplayFor(model => model.AccountPerson.AccountPerson1)</dd>
+		<dt>AccountSubType</dt>
+		<dd>@Html.DisplayFor(model => model.AccountSubType.AccountSubType1)</dd>
+		<dt>SortOrder</dt>
+		<dd>@Html.DisplayFor(model => model.AccountSubType.SortOrder)</dd>
+		<dt>AccountType</dt>
+		<dd>@Html.DisplayFor(model => model.AccountSubType.AccountType.AccountType1)</dd>
+	</dl>
+</div>
+<p>
+	@Html.ActionLink("Edit", "AccountEdit", new { id = Model.Id }) |
+	@Html.ActionLink("Back to List", "AccountList", "Home")
+</p>
